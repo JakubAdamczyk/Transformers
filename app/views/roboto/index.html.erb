@@ -1,0 +1,41 @@
+
+<h2>KillaBot3000 Awaits for your commands</h2>
+
+<div class="image">
+<%=image_tag("Robot-with-gun-Shutterstock.jpg", alt: "KillerRbot")%>
+</div>
+<br>
+
+
+
+<%= link_to roboto_lock_path, :class => "btn btn-success btn-lg" do %>
+<i class="glyphicon glyphicon-off"></i> Press to Wake Up KillaBot
+<% end %>
+<br>
+
+<div class="buttons">
+<%= link_to "Add Credit", new_wallet_path, :class => "btn btn-primary" %>
+
+<%= link_to "To Glory", roboto_forward_path, :class => "btn btn-primary" %>
+
+<%= link_to "Retreat", roboto_backward_path, :class => "btn btn-primary" %>
+
+<%= link_to "To Glory, but slowly", roboto_slow_forward_path, :class => "btn btn-primary" %>
+
+<%= link_to "retreat slowly", roboto_slow_backward_path, :class => "btn btn-primary" %>
+
+<%= link_to "Left", roboto_left_path, :class => "btn btn-primary" %>
+
+<%= link_to "Right", roboto_right_path, :class => "btn btn-primary" %>
+
+<%= link_to "Run", roboto_run_path, :class => "btn btn-primary" %>
+
+<%= link_to roboto_attack_path, :class => "btn btn-danger" do%>
+<i class="glyphicon glyphicon-screenshot"></i> Kill 'Em All
+<% end %>
+</div>
+<br>
+Odleglosc od robota to :<%=@odleglosc%>
+
+
+
