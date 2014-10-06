@@ -1,11 +1,10 @@
 class WalletsController < ApplicationController
 
   def new
-   @credit = Wallets.new
- end
 
- def create
-    # @credit = current_user.wallets.create(credit: true)
+  end
+
+  def create
 
     credit_card = ActiveMerchant::Billing::CreditCard.new(
       :number     => (params[:number]),
@@ -39,7 +38,7 @@ class WalletsController < ApplicationController
 
 else 
   flash[:alert] = "nie mamy twojej kasy, twoja karta jest slaba!"
-    render :new
+  render :new
 
 end
 
